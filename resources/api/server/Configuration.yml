@@ -1,0 +1,209 @@
+openapi: 3.0.1
+info:
+  title: FitQue Login Service
+  description: All API endpoints to manage the fitque-users-api service
+  version: 1.0.0
+servers:
+  - url: /fitque-users-api/v1
+
+tags:
+  - name: FitQueue Login Service
+    description: API endpointss to integrate with FitQue Login Modules
+
+paths:
+  /retrieve-login:
+    post:
+      tags:
+        - Login
+      summary: Retrieve Login information 
+      operationId: RetrieveLogin
+      parameters:
+        - $ref: '#/components/parameters/acceptLanguage'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        500:
+          description: Server Error
+          content: {}
+        400:
+          description: URL not found
+          content: {}
+        405:
+          description: URL exists but method not allowed/implemented
+          content: {}
+        401:
+          description: unauthorized
+          content: {}
+        403:
+          description: Forbidden
+          content: {}
+        503:
+          description: timeout
+          content: {}
+  /create-login:
+    post:
+      tags:
+        - Login
+      summary: Create Login information 
+      operationId: CreateLogin
+      parameters:
+        - $ref: '#/components/parameters/acceptLanguage'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatedLoginRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatedLoginResponse'
+        500:
+          description: Server Error
+          content: {}
+        400:
+          description: URL not found
+          content: {}
+        405:
+          description: URL exists but method not allowed/implemented
+          content: {}
+        401:
+          description: unauthorized
+          content: {}
+        403:
+          description: Forbidden
+          content: {}
+        503:
+          description: timeout
+          content: {}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    CreatedLoginRequest:
+      type: object
+      properties:
+        LoginID:
+          type: string
+          required: true
+        MemberID:
+          type: string
+          required: true
+        LocationID:
+          type: string
+          required: true
+        UserName:
+          type: string
+          required: true
+        EfctvStartDt:
+          type: string
+          format: date-time
+          required: true
+    CreatedLoginResponse:
+      type: object
+      properties:
+        LoginID:
+          type: string
+          required: true
+        MemberID:
+          type: string
+          required: true
+        LocationID:
+          type: string
+          required: true
+        UserName:
+          type: string
+          required: true
+        EfctvStartDt:
+          type: string
+          format: date-time
+          required: true
+    LoginRequest:
+      type: object
+      properties:
+        UserName:
+          type: string
+    LoginResponse:
+      type: object
+      properties:
+        LoginID:
+          type: string
+          required: true
+        MemberID:
+          type: string
+          required: true
+        LocationID:
+          type: string
+          required: true
+        UserName:
+          type: string
+          required: true
+        EfctvStartDt:
+          type: string
+          format: date-time
+          required: true
+  headers:
+    Vary:
+      description: Used to decide whether a cached response can be used
+      schema:
+        type: string
+    Cache-Control:
+      description: Controls caching mechanisms
+      schema:
+        type: string
+  parameters:
+    isonetime:
+      in: query
+      name: isonetime
+      description: NextGen context parameter
+      schema:
+        type: string
+    access_token:
+      in: query
+      name: access_token
+      description: NextGen security parameter
+      schema:
+        type: string
+    acceptLanguage:
+      in: header
+      name: Accept-Language
+      description: Advertises which languages the client is able to understand, and which locale variant is preferred
+      schema:
+        type: string
+    pageSize:
+      in: header
+      name: Page-Size
+      description: Size of page
+      schema:
+        type: integer
+        minimum: 0
+        default: 50
+    restartRowId:
+      in: header
+      name: Restart-Row-Id
+      description: Restart row ID for pagination
+      schema:
+        type: string
+        default: "0"
+    sort:
+      in: header
+      name: Sort
+      description: Describes how to sort based on property and description (direction)
+      schema:
+        $ref: '#/components/schemas/sort'
+security:
+  - bearerAuth: []

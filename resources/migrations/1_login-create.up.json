@@ -1,0 +1,50 @@
+[
+  {
+    "create": "login",
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "LoginID",
+          "MemberID",
+          "LocationID",
+          "UserName",
+          "EfctvStartDt"
+        ],
+        "properties": {
+          "LoginID": {
+            "bsonType": "string"
+          },
+          "MemberID": {
+            "bsonType": "string"
+          },
+          "LocationID": {
+            "bsonType": "string"
+          },
+          "UserName": {
+            "bsonType": "string"
+          },
+          "EfctvStartDt": {
+            "bsonType": "date"
+          },
+          "EfctvEndDt": {
+            "bsonType": "date"
+          }
+        }
+      }
+    }
+  },
+  {
+    "createIndexes": "login",
+    "indexes": [
+      {
+        "key": {
+          "LoginID": 1
+        },
+        "name": "PK_LoginID",
+        "unique": true
+      }
+    ],
+    "writeConcern": {}
+  }
+]

@@ -1,0 +1,124 @@
+{
+	"UserID": "80161116-06c1-425e-b6c2-f6f3864190e8fd",
+	"MemberID": "123654",
+	"FirstName": "LA-GUNN",
+	"LastName": "LA-GUNN",
+	"Addresses": [
+	  {
+		"AddressType": "",
+		"AddressTo": "",
+		"AddressLine1": "",
+		"AddressLine2": "",
+		"City": "",
+		"State": "",
+		"Zipcode": "",
+		"ZipcodePlus4": ""
+	  }
+	],
+	"Facilities": [
+	  {
+		"FacilityType": "",
+		"FacilityIDType": "",
+		"FacilityID": "",
+		"FacilityName": "",
+		"AddressTo": "",
+		"AddressLine1": "",
+		"AddressLine2": "",
+		"City": "",
+		"State": "",
+		"Zipcode": "",
+		"ZipcodePlus4": "",
+		"Logins": [
+		  {
+			"LocationID": "",
+			"LoginID": "",
+			"AddressLine1": "",
+			"AddressLine2": "",
+			"City": "",
+			"State": "",
+			"Zipcode": "",
+			"EfctvStartDt": "2020-04-15T18:00:15-00:00",
+			"EfctvEndDt": "2020-04-15T18:00:15-00:00",
+			"Measurements": [
+			  {
+				"LocationID": "LA-GUNN",
+				"SensorID": "CABLELATPULL",
+				"MotionStartDt": "2020-04-15T18:00:15-00:00",
+				"MotionEndDt": "2020-04-15T18:00:15-00:00",
+				"Measurements": [
+				  {
+					"Report": "80",
+					"ReportDt": "2020-11-25T18:00:15.000Z"
+				  },
+				  {
+					"Report": "70",
+					"ReportDt": "2020-11-25T18:10:15.000Z"
+				  },
+				  {
+					"Report": "60",
+					"ReportDt": "2020-11-25T18:20:15.000Z"
+				  },
+				  {
+					"Report": "50",
+					"ReportDt": "2020-11-25T18:30:15.000Z"
+				  },
+				  {
+					"Report": "40",
+					"ReportDt": "2020-11-25T18:40:15.000Z"
+				  },
+				  {
+					"Report": "30",
+					"ReportDt": "2020-11-25T18:50:15.000Z"
+				  },
+				  {
+					"Report": "20",
+					"ReportDt": "2020-11-25T19:00:15.000Z"
+				  },
+				  {
+					"Report": "10",
+					"ReportDt": "2020-11-25T19:10:15.000Z"
+				  },
+				  {
+					"Report": "5",
+					"ReportDt": "2020-11-25T19:20:15.000Z"
+				  },
+				  {
+					"Report": "10",
+					"ReportDt": "2020-11-25T19:30:15.000Z"
+				  },
+				  {
+					"Report": "20",
+					"ReportDt": "2020-11-25T19:40:15.000Z"
+				  },
+				  {
+					"Report": "30",
+					"ReportDt": "2020-11-25T19:50:15.000Z"
+				  },
+				  {
+					"Report": "40",
+					"ReportDt": "2020-11-25T20:00:15.000Z"
+				  },
+				  {
+					"Report": "50",
+					"ReportDt": "2020-11-25T20:10:15.000Z"
+				  },
+				  {
+					"Report": "60",
+					"ReportDt": "2020-11-25T20:20:15.000Z"
+				  },
+				  {
+					"Report": "70",
+					"ReportDt": "2020-11-25T20:30:15.000Z"
+				  },
+				  {
+					"Report": "80",
+					"ReportDt": "2020-11-25T20:40:15.000Z"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  }
+	]
+  }

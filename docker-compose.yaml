@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    hostname: mongo
+#    environment:
+#      MONGO_INITDB_DATABASE: int-address-hierarchy
+#      MONGO_INITDB_ROOT_USERNAME: test_user
+#      MONGO_INITDB_ROOT_PASSWORD: test_pwd
+    ports:
+    - "27017:27017"
+    #entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0"]
+    healthcheck:
+      test: test $$(echo "rs.initiate().ok || rs.status().ok" | mongo --quiet) -eq 1
+      interval: 10s
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "5775:5775/udp"
+      - "6831:6831/udp"
+      - "6832:6832/udp"
+      - "5778:5778"
+      - "16686:16686"
+      - "14268:14268"
+      - "9411:9411"
+

@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "01b6f09b-e1b5-4816-9d04-7d8598144fce",
+		"name": "admFitqueJUsersAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createLogin-localhost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"LoginID\": \"80161116-06c1-425e-b6c2-f6f3864190e8fa\",\r\n  \"MemberID\": \"123654\",\r\n  \"LocationID\": \"LA-GUNN\",\r\n  \"UserName\": \"JAusten\",\r\n  \"EfctvStartDt\": \"2020-04-15T18:00:15-00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/fitqueue-login-api/v1/create-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"fitqueue-login-api",
+						"v1",
+						"create-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "termLogin-localhost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"LoginID\": \"80161116-06c1-425e-b6c2-f6f3864190e8fc\",\r\n    \"MemberID\": \"123654\",\r\n    \"LocationID\": \"LA-GUNN\",\r\n    \"UserName\": \"JAusten\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/fitqueue-login-api/v1/term-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"fitqueue-login-api",
+						"v1",
+						"term-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createLogin-LN002PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"LoginID\": \"80161116-06c1-425e-b6c2-f6f3864190e8fc\",\r\n  \"MemberID\": \"123654\",\r\n  \"LocationID\": \"LA-GUNN\",\r\n  \"UserName\": \"JAusten\",\r\n  \"EfctvStartDt\": \"2020-04-15T18:00:15-00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ln002prd:3001/fitqueue-login-api/v1/create-login",
+					"protocol": "http",
+					"host": [
+						"ln002prd"
+					],
+					"port": "3001",
+					"path": [
+						"fitqueue-login-api",
+						"v1",
+						"create-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "termLogin-LN002PRD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"LoginID\": \"80161116-06c1-425e-b6c2-f6f3864190e8fc\",\r\n    \"MemberID\": \"123654\",\r\n    \"LocationID\": \"LA-GUNN\",\r\n    \"UserName\": \"JAusten\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ln002prd:3001/fitqueue-login-api/v1/term-login",
+					"protocol": "http",
+					"host": [
+						"ln002prd"
+					],
+					"port": "3001",
+					"path": [
+						"fitqueue-login-api",
+						"v1",
+						"term-login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
